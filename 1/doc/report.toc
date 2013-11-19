@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Kinematic Models}{2}
+\contentsline {subsection}{\numberline {2.1}Establishing the kinematics}{3}
+\contentsline {subsubsection}{\numberline {2.1.1}Odometry of differential drive robot}{3}
+\contentsline {paragraph}{a}{3}
+\contentsline {paragraph}{b}{3}
+\contentsline {section}{\numberline {3}Preparation for a real experiment}{4}
+\contentsline {paragraph}{a}{4}
+\contentsline {paragraph}{b}{4}
+\contentsline {paragraph}{c}{4}
+\contentsline {section}{\numberline {4}Experiments}{5}
+\contentsline {section}{\numberline {5}Conclusions}{5}
