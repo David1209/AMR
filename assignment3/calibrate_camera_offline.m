@@ -1,5 +1,5 @@
 
-file = 'a.jpg';
+file = 'c.jpg';
 tmpsnapshot = imread(file);
 
 % Flip the image Up-Down
@@ -14,11 +14,11 @@ Rmin = round( 77/480*size(snapshot,1) )
 
 % This functrion allows you to calibrate the camera (extract the center of
 % the image). Follow the directions on-line
-figure(1); [center, radius] = get_circle(snapshot);
+figure(1); [center2, radius2] = get_circle(snapshot);
 
 % Hardcode radius and center because its hard to click it perfectly
-%center = [324.8523 224.4726];
-%radius = 24.1684;
+center = [326 225];
+radius = 24;
 
 
 % Draw the max and min radius

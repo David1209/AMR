@@ -20,13 +20,13 @@
 % Rmin = 77;%         Min detectable distance in pixels in VGA image
 %                     Rmin was already loaded when calling "calibrate_camera.m"
 % increase alpha so straight lines are striaght
-alpha = 115;%          Radial distortion coefficient, YOU MAY NEED TO TUNE THIS PARAMETER!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+alpha = 120;%          Radial distortion coefficient, YOU MAY NEED TO TUNE THIS PARAMETER!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 height = 0.17;%       camera height in meters, YOU MAY NEED TO TUNE THIS PARAMETER!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 BWthreshold = 200;%   Threshold for segment the image into Black & white colors, YOU MAY NEED TO TUNE THIS PARAMETER!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 angstep = 1.0;%       Angular step of the beam in degrees
 axislimit = 0.8;%     Axis limit
 
-Rmin = 75;            % Overwrite value from calibration step.
+Rmin = 80;            % Overwrite value from calibration step.
 
 % -------------------------------------------------------------------------
 % MAIN
@@ -34,7 +34,7 @@ Rmin = 75;            % Overwrite value from calibration step.
 for i=1:35
     tic;%                               Start counting elapsed time
     
-    file = 'a.jpg';
+    file = 'c.jpg';
     snapshot = imread(file);
     
     snapshot = imflipud(snapshot); 
@@ -67,6 +67,10 @@ for i=1:35
     figure; 
     draw_undistorted_beam(dist, theta, axislimit);
     
+    
+    % Remove infinite numbers in rho (bug)
+    rep=find(rho==inf);
+    rho(rep) = Rmax;
     % Error propagation
     sigma_rho = std(rho)*0.1;
     sigma_dist = compute_uncertainty(rho, sigma_rho, alpha, height);
