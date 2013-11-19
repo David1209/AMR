@@ -71,11 +71,17 @@ Moving onwards with formula \ref{start}, we can establish the kinematics of the 
 In the formula for the differential drive robot, $l_c$ is left out since the influence of the castor wheel on the movement is negligible.
 \subsubsection{Odometry of differential drive robot}
 \paragraph{a} \begin{equation}
-\xi_I = \begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix}
-= \begin{bmatrix} \cos \theta && - \sin \theta && 0 \\
+\xi_I = 
+\begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix}
+= 
+\begin{bmatrix} \cos \theta && - \sin \theta && 0 \\
 \sin \theta && \cos \theta && 0 \\
-0 && 0 && 1 \end{bmatrix} \begin{bmatrix} \frac{r\dot{\varphi_1}}{2} + \frac{r\dot{\varphi_2}}{2} \\ 0 \\ \frac{r\dot{\varphi_1}}{2l} + \frac{-r\dot{\varphi_2}}{2l} \end{bmatrix}
+0 && 0 && 1 \end{bmatrix} 
+\begin{bmatrix} \frac{r\dot{\varphi_1}}{2} + \frac{r\dot{\varphi_2}}{2} && 0 \\ 0 && 1 \\ \frac{r\dot{\varphi_1}}{2l} + \frac{-r\dot{\varphi_2}}{2l} && 0\end{bmatrix}
 \end{equation}
+
+Als je de matrix invult, wordt \theta ingevuld met \omega. y is altijd 0 want je rijdt in x richting. x is de afstand in meters/whatever.
+
 \paragraph{b} The larger ${\Delta}t$, the less precise the estimation of the position is. The rotation $w$ increases when the difference between $\varphi_1$ and $\varphi_2$ increases ($\varphi_1$ and $\varphi_2$ are the speed of the wheels). The heading speed $v$ increases when the sum of $\varphi_1$ and $\varphi_2$ increases.
 \clearpage
 \section{Preparation for a real experiment}
