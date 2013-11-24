@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.10)  24 NOV 2013 23:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.10)  24 NOV 2013 23:28
 entering extended mode
 **report.tex
 (C:\Users\Ruben\Documents\GitHub\AMR\assignment1\doc\report.tex
@@ -481,6 +481,9 @@ Overfull \hbox (6.57782pt too wide) in paragraph at lines 30--30
 []\OT1/cmr/bx/n/17.28 Exercise 1: Mo-tion of Differential-Drive and
  []
 
+
+LaTeX Warning: Reference `wheels' on page 2 undefined on input line 42.
+
 <wheels.png, id=16, 405.01312pt x 229.60782pt>
 File: wheels.png Graphic file (type png)
  <use wheels.png>
@@ -488,43 +491,64 @@ Package pdftex.def Info: wheels.png used on input line 45.
 (pdftex.def)             Requested size: 195.0pt x 110.55034pt.
  [2
 
- <C:/Users/Ruben/Documents/GitHub/AMR/assignment1/doc/wheels.png>] [3
+ <C:/Users/Ruben/Documents/GitHub/AMR/assignment1/doc/wheels.png>]
+
+LaTeX Warning: Reference `start' on page 3 undefined on input line 50.
+
+
+LaTeX Warning: Reference `for:div' on page 3 undefined on input line 50.
+
+
+LaTeX Warning: Reference `for:omni' on page 3 undefined on input line 50.
+
+[3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 142--145
+Underfull \hbox (badness 10000) in paragraph at lines 143--146
 
  []
 
 [4]
-Overfull \hbox (1.05074pt too wide) in paragraph at lines 149--150
+Overfull \hbox (1.05074pt too wide) in paragraph at lines 150--151
  \OT1/cmr/bx/n/12 c[] \OT1/cmr/m/n/12 For the Mat-lab im-ple-men-ta-tion, see [
 ]\OT1/cmtt/m/n/12 circle.m\OT1/cmr/m/n/12 , []\OT1/cmtt/m/n/12 straightLine.m\O
 T1/cmr/m/n/12 , []\OT1/cmtt/m/n/12 drive.m
  []
 
-[5] <lijn1.jpg, id=39, 2698.08pt x 1525.7pt>
+[5]
+
+LaTeX Warning: Reference `driveline' on page 6 undefined on input line 153.
+
+<lijn1.jpg, id=39, 2698.08pt x 1525.7pt>
 File: lijn1.jpg Graphic file (type jpg)
  <use lijn1.jpg>
-Package pdftex.def Info: lijn1.jpg used on input line 156.
+Package pdftex.def Info: lijn1.jpg used on input line 157.
 (pdftex.def)             Requested size: 117.00119pt x 66.13927pt.
 
 <lijn2.jpg, id=40, 2698.08pt x 1525.7pt>
 File: lijn2.jpg Graphic file (type jpg)
  <use lijn2.jpg>
-Package pdftex.def Info: lijn2.jpg used on input line 160.
+Package pdftex.def Info: lijn2.jpg used on input line 161.
 (pdftex.def)             Requested size: 117.00119pt x 66.13927pt.
 
 <lijn3.jpg, id=41, 2698.08pt x 1525.7pt>
 File: lijn3.jpg Graphic file (type jpg)
  <use lijn3.jpg>
-Package pdftex.def Info: lijn3.jpg used on input line 164.
+Package pdftex.def Info: lijn3.jpg used on input line 165.
 (pdftex.def)             Requested size: 117.00119pt x 66.13927pt.
  [6
 
  <C:/Users/Ruben/Documents/GitHub/AMR/assignment1/doc/lijn1.jpg> <C:/Users/Rube
 n/Documents/GitHub/AMR/assignment1/doc/lijn2.jpg> <C:/Users/Ruben/Documents/Git
 Hub/AMR/assignment1/doc/lijn3.jpg>] (C:\Users\Ruben\Documents\GitHub\AMR\assign
-ment1\doc\report.aux) ) 
+ment1\doc\report.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  11207 strings out of 493921
  209646 string characters out of 3144876
@@ -532,20 +556,20 @@ Here is how much of TeX's memory you used:
  14303 multiletter control sequences out of 15000+200000
  9987 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,16n,55p,716b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (7 pages, 3267534 bytes).
+ 56i,16n,55p,723b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (7 pages, 3267834 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
