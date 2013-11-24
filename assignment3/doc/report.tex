@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+% \usepackage[margin=1.7cm]{geometry}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{textcomp}
+\begin{document}
+\begin{titlepage}
+\begin{center}
+    \includegraphics[width=\textwidth]{./logo.png}
+    \\ [2.5cm]
+    \textsc{\Large Autonomous Mobile Robots}
+    \\ [0.5cm]
+    \textsc{\large Second assignment}
+    \\ [1cm]
+    \hrule
+    \vspace{0.3cm}
+    \textsc{Range Finder using Omnidirectional Camera}
+    \\ [0.3cm]
+    \hrule
+    \vfill
+    \textsc{Ruben Janssen, 10252657 \\ David van Erkelens, 10264019 \\ Laurens Verspeek, 10184465 \\[0.7cm] Department of Computer Science \\ University of Amsterdam \\[0.3cm] \today}
+\end{center}
+\end{titlepage}
+\tableofcontents
+\clearpage
+\section{Introduction}
+In this report, our findings regarding detecting distances from walls to our LEGO robot will be described. In mobile robotics, moving robots need to detect distances to walls in order to ensure a save navigation. Devices that are usually used to accomplish this task are laser range finders and ultrasonic detectors. These sensors operate by emitting a pulse and measuring the time the pulse needs to reflect on a surface and return to the emitter. For our LEGO robot, a omnidirectional camera is used.
+\section{Setup}
+The omnidirectional camera used consists of a standard webcam and a spherical mirror. The webcam is positioned to look upwards to the mirror, resulting in a 360\textdegree view of the surroundings of the robot. However, due to a lack of equipment, we have used a default image instead of a real-world camera.
+\section{Processing the image}
+In order to start working with the image, we have to flip the image. This is because the image is acquired with use of a camera, resulting in a upside-down image. As soon as the image is flipped, two calibration points have to be pointed out: the center of the image, in which the center of the camera lies, and the minimum distance, because the camera would otherwise detect itself. \\ \\
+As soon as these points have been given, the image can be unwrapped into a new image in which every radial of the original image becomes a vertical line. If the calibration is correct, the border of the camera lens should be a straight line. The function used to unwrap this image takes a few arguments: the image to unwrap, the center of the image which is the center of the camera lens, the minimum and maximum distance and how many degrees should span one radial line. \\ \\
+When the image is correctly unwrapped, the edges have to be detected. This can be done pretty easily. The unwrapped image will be converted into black and white, regarding a certain threshold. 
+\end {document}
