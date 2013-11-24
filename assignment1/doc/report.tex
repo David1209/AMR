@@ -70,20 +70,54 @@ Moving onwards with formula \ref{start}, we can establish the kinematics of the 
 \end{equation} 
 In the formula for the differential drive robot, $l_c$ is left out since the influence of the castor wheel on the movement is negligible.
 \subsubsection{Odometry of differential drive robot}
-\paragraph{a} \begin{equation}
+\paragraph{a} The default way of determining the next position of the robot is:
+\begin{equation}
 \xi_I = 
 \begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix}
 = 
-\begin{bmatrix} \cos \theta && - \sin \theta && 0 \\
-\sin \theta && \cos \theta && 0 \\
-0 && 0 && 1 \end{bmatrix} 
-\begin{bmatrix} \frac{r\dot{\varphi_1}}{2} + \frac{r\dot{\varphi_2}}{2} && 0 \\ 0 && 1 \\ \frac{r\dot{\varphi_1}}{2l} + \frac{-r\dot{\varphi_2}}{2l} && 0\end{bmatrix}
+R(\theta)^{-1}
+\begin{bmatrix} \frac{r}{2} && \frac{r}{2} \\ 
+0 && 0  \\ 
+\frac{r}{2l} && \frac{-r}{2l}\end{bmatrix}
+\begin{bmatrix}
+\dot{\varphi_1} \\
+\dot{\varphi_2}
+\end{bmatrix}
+\end{equation}
+In order to calculate the power needed to drive the wheels, we assume $\dot{x}$, $\dot{y}$ and $\dot{\theta}$ are known. Then, we need to make some adjustments to the equation above:
+\begin{equation}
+\xi_I = 
+\begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix}
+= 
+R(\theta)^{-1}
+\begin{bmatrix} \frac{r}{2} && \frac{r}{2} && 0 \\ 
+0 && 0  && 1\\ 
+\frac{r}{2l} && \frac{-r}{2l} && 0\end{bmatrix}
+\begin{bmatrix}
+\dot{\varphi_1} \\
+\dot{\varphi_2} \\
+0
+\end{bmatrix}
 \end{equation}
 
-Als je de matrix invult, wordt \theta ingevuld met \omega. y is altijd 0 want je rijdt in x richting. x is de afstand in meters/whatever.
+This yields the same result, but makes certain matrices inversible. Then, the required speeds can be calculated as following:
+\begin{equation}
+\begin{bmatrix}
+\dot{\varphi_1} \\
+\dot{\varphi_2} \\
+0
+\end{bmatrix}
+= 
+\begin{bmatrix} \frac{r}{2} && \frac{r}{2} && 0 \\ 
+0 && 0  && 1\\ 
+\frac{r}{2l} && \frac{-r}{2l} && 0\end{bmatrix}^{-1}
+R(\theta)
+\begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix}
+\end{equation}
+
+However, due to a lack of time, the powers are determined in another way in the rest of the report and the code.
 
 \paragraph{b} The larger ${\Delta}t$, the less precise the estimation of the position is. The rotation $w$ increases when the difference between $\varphi_1$ and $\varphi_2$ increases ($\varphi_1$ and $\varphi_2$ are the speed of the wheels). The heading speed $v$ increases when the sum of $\varphi_1$ and $\varphi_2$ increases.
-\clearpage
 \section{Preparation for a real experiment}
 \paragraph{a} First, the circle to be followed has to be determined, using a radius $r$. Then, the number of degrees to follow the circle should be determined, as $g$. \\ 
 To move the robot as desired, the distance to travel with each wheel should be calculated. 
@@ -112,15 +146,15 @@ To make the robot drive in a straight line, only the \verb|Tacho|-limit is of im
 In order to test the code and formulas, the robot was tested in the \textit{Robolab}. In the \textit{Robolab} lies a football field used for Naos, but that field was perfectly suitable for testing our NXT. The NXT was programmed to follow the circle in the center of the field, which has a diameter of 60cm. In figure \ref{driveline}, the path of the NXT across this line is shown. On the pictures the NXT has a small offset from the line, but this can be explained by a faulty starting position. \\
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[b]{0.3333\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
             \includegraphics[width=\textwidth]{lijn1.jpg}
     \end{subfigure}%
     ~ 
-    \begin{subfigure}[b]{0.3333\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
             \includegraphics[width=\textwidth]{lijn2.jpg}
     \end{subfigure}
     ~ 
-    \begin{subfigure}[b]{0.3333\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
             \includegraphics[width=\textwidth]{lijn3.jpg}
     \end{subfigure}
     \caption{The NXT driving along the line}
