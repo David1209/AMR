@@ -27,9 +27,8 @@
 \end{titlepage}
 \tableofcontents
 \clearpage
-\section{Introduction}
-In this report the first findings of programming the NXT to follow a certain path given by circles and lines will be described. 
-\section{Kinematic Models}
+\section{Exercise 1: Motion of Differential-Drive and Omni-Drive Robot}
+\subsection{Kinematic model}
 The following formula is given: 
 \begin{equation}
     \begin{bmatrix} 
@@ -40,15 +39,14 @@ The following formula is given:
     = f(\dot{\varphi_1}, \dot{\varphi_2}, l, r, l_c, d, r_c, \ldots)
     \label{start}
 \end{equation}
-When applying this to the differential drive robot, $r$ denotes the diameter of the wheels and $l$ denotes the distance between the origin of the robot and the wheels. A $l$ and $r$ with an underscore $c$ denotes these distances for the castor wheel. The $d$ denotes the distance between the wheel contact point and the center of rotation of the castor wheel. $\varphi_1$ and $\varphi_2$ denote the movement of the wheels. In figure \ref{wheels}, the allocation of $\varphi_1$ and $\varphi_2$ to the wheels is shown. In case of the omni-drive robot, $\varphi_n$ denotes the movement of the $n^{th}$ wheel and $l$ and $r$ have the same meaning as with the differential-drive robot.
+When applying this to the differential drive robot, $r$ denotes the diameter of the wheels and $l$ denotes the distance between the origin of the robot and the wheels. $l_c$ and $r_c$ denote these distances for the castor wheel. The $d$ denotes the distance between the wheel contact point and the center of rotation of the castor wheel. $\dot{\varphi_1}$ and $\dot{\varphi_2}$ denote the rotation speed of the wheels. In figure \ref{wheels}, the allocation of $\dot{\varphi_1}$ and $\dot{\varphi_2}$ to the wheels is shown. In case of the omni-drive robot, $\dot{\varphi_n}$ denotes the movement of the $n^{th}$ wheel and $l$ and $r$ have the same meaning as with the differential-drive robot.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{wheels.png}
-    \caption{The allocation of $\varphi_1$ and $\varphi_2$}
+    \caption{The allocation of $\dot{\varphi_1}$ and $\dot{\varphi_2}$}
     \label{wheels}
 \end{figure}
 \clearpage
-\subsection{Establishing the kinematics}
 Moving onwards with formula \ref{start}, we can establish the kinematics of the differential-drive robot (shown in formula \ref{for:div}) and the omni-drive robot (shown in formula \ref{for:omni}).
 \begin{equation}
     \begin{bmatrix} 
@@ -70,7 +68,7 @@ Moving onwards with formula \ref{start}, we can establish the kinematics of the 
 \end{equation} 
 In the formula for the differential drive robot, $l_c$ is left out since the influence of the castor wheel on the movement is negligible.
 \subsubsection{Odometry of differential drive robot}
-\paragraph{a} The default way of determining the next position of the robot is:
+\paragraph{a} The kinematic model for the differential-drive robot is:
 \begin{equation}
 \xi_I = 
 \begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix}
@@ -84,7 +82,11 @@ R(\theta)^{-1}
 \dot{\varphi_2}
 \end{bmatrix}
 \end{equation}
-In order to calculate the power needed to drive the wheels, we assume $\dot{x}$, $\dot{y}$ and $\dot{\theta}$ are known. Then, we need to make some adjustments to the equation above:
+
+This equation states te relation between the movement of the wheels ($\dot{\varphi_1}$, $\dot{\varphi_2}$) and the developement of the position ($\dot{x}$,$\dot{y}$) and orientation $\dot{\theta}$ of the robot in the plane.
+
+\paragraph{b}
+To find out how the speeds of the two wheels ($\dot{\varphi_1}$, $\dot{\varphi_2}$) are related to the rotation w and heading speed v of the robot, it is necessary to rewrite the kinematic model for the differential-drive robot:
 \begin{equation}
 \xi_I = 
 \begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix}
@@ -115,10 +117,14 @@ R(\theta)
 \begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix}
 \end{equation}
 
-However, due to a lack of time, the powers are determined in another way in the rest of the report and the code.
+This allows us to determine the speed of both wheels.
+Filling in this equation, it comes clear that when the rotation speeds of the wheels differ, the orientation of the robot ($\dot{\theta}$) will change. In other words, the robot will rotate. The larger the difference in speeds, the bigger the rotation of the robot is.
 
-\paragraph{b} The larger ${\Delta}t$, the less precise the estimation of the position is. The rotation $w$ increases when the difference between $\varphi_1$ and $\varphi_2$ increases ($\varphi_1$ and $\varphi_2$ are the speed of the wheels). The heading speed $v$ increases when the sum of $\varphi_1$ and $\varphi_2$ increases.
+Similarly, larger speeds of the wheel will result into a higher heading speed v. Filling in higher speeds into the equation, heading speeds  ($\dot{x}$,$\dot{y}$) will increase lineairly. 
+
+The precision of the position 'estimate' will increase when ${\Delta}t$ decreases. If a robot moves, an estimate made is always wrong by a maximum of ${\Delta}t$. Decreasing ${\Delta}t$ will reslut into a more real-time estimation of the position of the robot. 
 \section{Preparation for a real experiment}
+Unfortunately, due to a lack of time. Our implementation does not use the kinematic model provided earlier. It is based on a different approach but the results are very good.
 \paragraph{a} First, the circle to be followed has to be determined, using a radius $r$. Then, the number of degrees to follow the circle should be determined, as $g$. \\ 
 To move the robot as desired, the distance to travel with each wheel should be calculated. 
 \begin{equation}

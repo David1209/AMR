@@ -1,12 +1,11 @@
-\contentsline {section}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {2}Kinematic Models}{2}
-\contentsline {subsection}{\numberline {2.1}Establishing the kinematics}{3}
-\contentsline {subsubsection}{\numberline {2.1.1}Odometry of differential drive robot}{3}
+\contentsline {section}{\numberline {1}Exercise 1: Motion of Differential-Drive and Omni-Drive Robot}{2}
+\contentsline {subsection}{\numberline {1.1}Kinematic model}{2}
+\contentsline {subsubsection}{\numberline {1.1.1}Odometry of differential drive robot}{3}
 \contentsline {paragraph}{a}{3}
-\contentsline {paragraph}{b}{4}
-\contentsline {section}{\numberline {3}Preparation for a real experiment}{4}
+\contentsline {paragraph}{b}{3}
+\contentsline {section}{\numberline {2}Preparation for a real experiment}{4}
 \contentsline {paragraph}{a}{4}
-\contentsline {paragraph}{b}{4}
+\contentsline {paragraph}{b}{5}
 \contentsline {paragraph}{c}{5}
-\contentsline {section}{\numberline {4}Experiments}{6}
-\contentsline {section}{\numberline {5}Conclusions}{6}
+\contentsline {section}{\numberline {3}Experiments}{6}
+\contentsline {section}{\numberline {4}Conclusions}{6}
