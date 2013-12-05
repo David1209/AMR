@@ -11,8 +11,8 @@ function dist = GetLaserScans(N)
 % MOST IMPORTANT PARAMETERS
 % -------------------------------------------------------------------------
 
-alpha = 107;%         Radial distortion coefficient
-height = 0.1261;%     camera height in meters
+alpha = 140;%         Radial distortion coefficient
+height = 0.21;%     camera height in meters
 
 %% ------Old values ------
 %alpha = 112;%         Radial distortion coefficient:  Robot ASL2: 112, other: 107
@@ -20,23 +20,28 @@ height = 0.1261;%     camera height in meters
 %height = 0.17;%       camera height in meters
 %% ---------------------------
 
-BWthreshold = 180; %   Threshold for segment the image into Black & white colors
+BWthreshold = 130; %   Threshold for segment the image into Black & white colors
 angstep = 360/N;%         Angular step of the beam in degrees
 axislimit = 0.8;%     Axis limit
 
-global vid
+%global vid
 global center Rmax Rmin
+center = [545; 402];
+Rmin = 115;
+Rmax = 170;
 
-%start(vid);
-snapshot = getsnapshot(vid);%       Acquire image
+%file = ['../dataset/picture1', '.jpg'];
+global file;
+snapshottmp = imread(file);
 
-snapshot = imflipud( snapshot );%   Flip the image Up-Down
+snapshot = imflipud( snapshottmp );%   Flip the image Up-Down
 
 [undistortedimg, theta] = imunwrap( snapshot , center, angstep, Rmax, Rmin);% Transform omnidirectional image into a rectangular image
 
 BWimg = img2bw( undistortedimg , BWthreshold ); % Binarize rectangular image into Blak&White
-
-rho = getpixeldistance( BWimg , Rmin );%     Get radial distance (this distance is still affected by radial distortion)
+figure;
+imagesc(BWimg);
+rho = getpixeldistance( BWimg , Rmin ); %Get radial distance (this distance is still affected by radial distortion)
 
 figure(3); imagesc(snapshot); hold on; drawlaserbeam( center, theta, rho ); %pause;
 

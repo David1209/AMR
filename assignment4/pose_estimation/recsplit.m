@@ -9,7 +9,7 @@ function [NLines, r, alpha, segend, seglen] = recsplit(XY)
   
   % Perform clustering
   [NClusters, ClusterIdx] = cluster(XY);
-  
+  NClusters
   NLines = 0;
   r = [];
   alpha = [];

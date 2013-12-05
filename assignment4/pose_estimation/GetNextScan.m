@@ -10,7 +10,6 @@ function  XY = GetNextScan
 
   % Get the laser points in polar coordinate.
   scans = GetLaserScans(NSCANPOINTS);
-
   % Convert points to cartesian coordinate
   XY = zeros(NSCANPOINTS,2);
   theta = [0:(2*pi)/NSCANPOINTS:2*pi]';
