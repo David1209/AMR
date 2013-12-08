@@ -5,5 +5,5 @@
 \contentsline {subsection}{\numberline {3.2}Comparing Lines}{3}
 \contentsline {subsection}{\numberline {3.3}Detecting Blobs}{3}
 \contentsline {subsection}{\numberline {3.4}Comparing Blobs}{3}
-\contentsline {subsection}{\numberline {3.5}Combining Blobs and Lines}{3}
-\contentsline {section}{\numberline {4}Conclusion}{3}
+\contentsline {subsection}{\numberline {3.5}Combining Blobs and Lines}{4}
+\contentsline {section}{\numberline {4}Conclusion}{4}
