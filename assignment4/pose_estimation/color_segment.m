@@ -92,39 +92,39 @@ for i = 1:num_a,
 end
 
 %% channel B
-for i = 1:num_b,
-    idx = find(L_b == i);
+%for i = 1:num_b,
+%    idx = find(L_b == i);
     
-    if ( (size( (idx),1) < min_pxarea) || (size( (idx),1) > max_pxarea) )
-        L_b(idx) = 0;
-    else    
-        c_col = (floor(idx / img_rows) + 1);
-        c_row = (mod(idx, img_rows) + 1);
+%    if ( (size( (idx),1) < min_pxarea) || (size( (idx),1) > max_pxarea) )
+%        L_b(idx) = 0;
+%    else    
+%        c_col = (floor(idx / img_rows) + 1);
+%        c_row = (mod(idx, img_rows) + 1);
 
-	cstd = std(c_col);
-	rstd = std(c_row);
+%	cstd = std(c_col);
+%	rstd = std(c_row);
 	
-        cc2 = sum(c_col) / size( (idx),1);
-        cc1 = sum(c_row) / size( (idx),1);       
+%        cc2 = sum(c_col) / size( (idx),1);
+%        cc1 = sum(c_row) / size( (idx),1);       
         
-	cc = img_center(1);	
-	rc = img_center(2);	
+%	cc = img_center(1);	
+%	rc = img_center(2);	
 %         if( (cc1 - radius)^2 + (cc2 - radius)^2 < radius^2)
 %             if( (cc1 - radius)^2 + (cc2 - radius)^2 > radius_inner^2)
 %                 cl_center = [cl_center; [cc1, cc2]];
 %             end    
 %         end             
-	if( (cc1 - rc)^2 + (cc2 - cc)^2 < radius^2)
-		if( (cc1 - rc)^2 + (cc2 - cc)^2 > radius_inner^2)
-			if ( (cstd <= stdthreshold) && (rstd <= stdthreshold) )
-				[ size( (idx),1) cstd rstd 2 ]
-				cl_center = [cl_center; [cc1, cc2]];
-				cl_type = [cl_type ; 2];  % 2nd color = blue
-			end;
-		end
-	end
-    end
-end
+%	if( (cc1 - rc)^2 + (cc2 - cc)^2 < radius^2)
+%		if( (cc1 - rc)^2 + (cc2 - cc)^2 > radius_inner^2)
+%			if ( (cstd <= stdthreshold) && (rstd <= stdthreshold) )
+%				[ size( (idx),1) cstd rstd 2 ]
+%				cl_center = [cl_center; [cc1, cc2]];
+%				cl_type = [cl_type ; 2];  % 2nd color = blue
+%			end;
+%		end
+%	end
+%    end
+%end
 
 
 %%

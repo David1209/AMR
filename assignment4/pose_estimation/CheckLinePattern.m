@@ -9,16 +9,12 @@ confusion = zeros(szX, szY);
 
 for i = 1:szX
 	for j = 1:szY
-	    confusion(i,j) = LevenshteinDistance(PatStringsTestSet{i}, PatStringsTrainSet{j});	
+        length = length(PatStringsTrainSet{i});
+        confusion(j,i) = ((length - LevenshteinDistance(PatStringsTrainSet{i}, PatStringsTestSet{j})) / length) * 100;
 	end
 end
 
-% display results
-PlaceID
-confusion
-
 % plot confusion matrix
+figure;
 colormap('gray')
-xlabel('Train')
-ylabel('Test')
 imagesc(confusion);

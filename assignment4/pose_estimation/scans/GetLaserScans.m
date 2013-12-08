@@ -39,8 +39,7 @@ snapshot = imflipud( snapshottmp );%   Flip the image Up-Down
 [undistortedimg, theta] = imunwrap( snapshot , center, angstep, Rmax, Rmin);% Transform omnidirectional image into a rectangular image
 
 BWimg = img2bw( undistortedimg , BWthreshold ); % Binarize rectangular image into Blak&White
-figure;
-imagesc(BWimg);
+
 rho = getpixeldistance( BWimg , Rmin ); %Get radial distance (this distance is still affected by radial distortion)
 
 figure(3); imagesc(snapshot); hold on; drawlaserbeam( center, theta, rho ); %pause;

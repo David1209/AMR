@@ -3,6 +3,8 @@ global center Rmax Rmin
 path(path, './scans/');
 configfile_blobs;
 
+S_storeTrainSet = {};
+PlaceIDTrainSet = {};
 NumStrings = 0;
 for i = 1:8
     global file;
@@ -35,12 +37,14 @@ for i = 1:8
 	S = ComputePatStringBlobs( cl_angles , cl_type);
 	disp(sprintf('BLOB Pattern string:  %s', num2str(S)));
 
-	S_storeTrainSet(i).lev = S;
-	PlaceIDTrainSet(i) = i;
+	S_storeTrainSet{i} = S;
+	PlaceIDTrainSet{i} = i;
 end
 save 'BlobSignaturesTrainSet.mat' S_storeTrainSet PlaceIDTrainSet;
 
 % Loop TestSet - while the user wants, get image, compute pattern, store pattern
+S_storeTestSet = {};
+PlaceIDTestSet = {};
 NumStrings = 0;
 for i = 1:8
     global file;
@@ -73,8 +77,8 @@ for i = 1:8
 	S = ComputePatStringBlobs( cl_angles , cl_type);
 	disp(sprintf('BLOB Pattern string:  %s', num2str(S)));
 
-	S_storeTestSet(i).lev = S;
-	PlaceIDTestSet(i) = i;
+	S_storeTestSet{i} = S;
+	PlaceIDTestSet{i} = i;
 end
 save 'BlobSignaturesTestSet.mat' S_storeTestSet PlaceIDTestSet;
 close all
