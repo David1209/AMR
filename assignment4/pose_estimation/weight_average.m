@@ -10,8 +10,8 @@ confusion = zeros(szX, szY);
 
 for i = 1:szX
 	for j = 1:szY
-        lengthLines = length(PatStringsTrainSet{i});
-        lengthBlobs = length(S_storeTrainSet{i});
+        lengthLines = size(PatStringsTrainSet{i},2);
+        lengthBlobs = size(S_storeTrainSet{i},2)
         cfLines = ((lengthLines - LevenshteinDistance(PatStringsTrainSet{i}, PatStringsTestSet{j})) / lengthLines) * 100;
         cfBlobs = ((lengthBlobs - LevenshteinDistance(S_storeTrainSet{i}, S_storeTestSet{j})) / lengthBlobs) * 100;
         confusion(j,i) = (cfLines*0.5 + cfBlobs) / 1.5;

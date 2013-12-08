@@ -14,7 +14,7 @@ end
 
 for i = 1:szX
 	for j = 1:szY
-        lt = length([S_storeTrainSet{i} PatStringsTrainSet{i}]);
+        lt = size(PatStringsTrainSet{i},2) + size(S_storeTrainSet{i},2);
         confusion(j,i) = ((lt - LevenshteinDistance(combinedTrain{i}, combinedTest{j})) / lt) * 100;
 	end
 end

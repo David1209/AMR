@@ -9,7 +9,7 @@ confusion = zeros(szX, szY);
 
 for i = 1:szX
 	for j = 1:szY
-        length = length(S_storeTrainSet{i});
+        length = size(S_storeTrainSet{i},2);
         confusion(j,i) = ((length - LevenshteinDistance(S_storeTrainSet{i}, S_storeTestSet{j})) / length) * 100;
 	end
 end

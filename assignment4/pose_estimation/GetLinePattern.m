@@ -3,7 +3,7 @@ function GetLinePattern()
 NumStrings = 0;
 PatStringsTrainSet = {};
 PlaceIDTrainSet = [];
-for i = 1:1
+for i = 1:8
   NumStrings = NumStrings + 1;
   
   global file;
@@ -43,7 +43,7 @@ save 'LabeledLineSignaturesTrainSet.mat' PatStringsTrainSet PlaceIDTrainSet;
 NumStrings = 0;
 PatStringsTestSet = {};
 PlaceIDTestSet = [];
-for i = 1:0
+for i = 1:8
   NumStrings = NumStrings + 1;
   global file;
   file = ['../dataset/TestSet/', int2str(i),'.jpg'];
@@ -80,5 +80,6 @@ for i = 1:0
 end
 save 'LabeledLineSignaturesTestSet.mat' PatStringsTestSet PlaceIDTestSet;
 
+close all
 return
 

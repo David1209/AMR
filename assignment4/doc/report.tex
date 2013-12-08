@@ -39,14 +39,29 @@ In order to compare the robots current positin with that of known locations, the
 \section{Implementation}
 \subsection{Detecting Lines}
 Before pictures can be compared, they have to be analysed. First, the walls are detected around the robot (1). Second, the detected walls are mapped on a grid corresponding with their distance from the vehicle (2). Third, the lines are extracted from the grid (3).
-pints, grid, lines
+pints, grid, lines.jpg
 
 The code to determine points and calculate the distance grid are provided. To extract the lines from the distance grid, a simpified version of the Split \& Merge algorithm is used. 
+
+GetLinePattern.m
  
 \subsection{Comparing Lines}
+lines_chance.jpg
+checkLinePattern.m
+
 \subsection{Detecting Blobs}
+blobs.jpg
+GetBlobPattern.m
+
 \subsection{Comparing Blobs}
+blobs_chance.jpg
+checkBlobPattern.m
+
 \subsection{Combining Blobs and Lines}
+weight_average.m
+fuse_sigs.m
+lines_and_blobs_chance_fusion.jpg
+lines_and_blobs_chance_weighted.jpg
 \section{Conclusion}
 dd
 
