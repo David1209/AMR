@@ -38,7 +38,7 @@ In order to compare the robots current position with that of known locations, th
 
 \section{Implementation}
 \subsection{Detecting Lines}
-Before pictures can be compared, they have to be analysed. First, the walls are detected around the robot (figure \ref{fig:points}). Second, the detected walls are mapped on a grid corresponding with their distance from the vehicle (figure \ref{fig:grid}). Third, the lines are extracted from the grid (figure \ref{fig:lines}).
+Before pictures can be compared, they have to be analysed. First, the walls are detected around the robot (figure \ref{fig:points}). Second, the detected walls are mapped on a grid corresponding with their distance from the vehicle (figure \ref{fig:grid}). Third, the lines are extracted from the grid (figure \ref{fig:lines}). \\
 \begin{figure}[h!]
 	\centering
 	\begin{subfigure}[b]{0.3\textwidth}
@@ -60,23 +60,27 @@ Before pictures can be compared, they have to be analysed. First, the walls are 
     \end{subfigure}
     \caption{Detecting lines}
 \end{figure}
-pints, grid, lines.jpg
 
 The code to determine points and calculate the distance grid are provided. To extract the lines from the distance grid, a simpified version of the Split \& Merge algorithm is used. 
 
-GetLinePattern.m
+% GetLinePattern.m
  
 \subsection{Comparing Lines}
-lineschance.jpg
-checkLinePattern.m
+In order to be able to detect the location of the robot, the measurements have to be compared to the learning set. A pattern string is formed
+
+\textbf{forming pattering string}.
+
+Using this pattern string, the images from the learning set and 
+% lineschance.jpg
+% checkLinePattern.m
 
 \subsection{Detecting Blobs}
-blobs.jpg
-GetBlobPattern.m
+% blobs.jpg
+% GetBlobPattern.m
 
 \subsection{Comparing Blobs}
-blobschance.jpg
-checkBlobPattern.m
+% blobschance.jpg
+% checkBlobPattern.m
 
 \subsection{Combining Blobs and Lines}
 % weight_average.m
