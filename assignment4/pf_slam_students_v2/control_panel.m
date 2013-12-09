@@ -6,8 +6,8 @@ close all
 % -------------------------------
 
 % % odo noises
-sigmaX = 0.003; % m
-sigmaTH = deg2rad(0.02); % rad
+sigmaX = 0.03; % m set to 0.010 for test
+sigmaTH = deg2rad(0.02); % rad set to 0.10 for test
 PARAMS.Q= [sigmaX^2 0; 0 sigmaTH^2];
 
 % % observation noises
@@ -16,7 +16,7 @@ sigmaB= deg2rad(0.01); % rad
 PARAMS.R= [sigmaR^2 0; 0 sigmaB^2];
 
 % NUM PARTICLES
-PARAMS.NPARTICLES= 200; 
+PARAMS.NPARTICLES = 1000; 
 
 % laser filtering
 PARAMS.FEAT_MIN_RANGE = 0.05;
