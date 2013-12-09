@@ -8,7 +8,7 @@ figure(4);
 
 % read the logfile 
 % **CHANGE LOG FILENAME HERE**
-log = ReadLogFile('example_log.txt');
+log = ReadLogFile('log.txt');
 logmatrix = log;
 
 % matrix size
@@ -28,6 +28,7 @@ PARAMS.FEAT_MIN_PT_CHK = 4;
 % unused
 PARAMS.FEAT_MAX_DIST = 90;
 
+
 for logrow=1:m_size,
 
     if(logmatrix(logrow,2) == 1)
@@ -37,7 +38,7 @@ for logrow=1:m_size,
         [rho, theta] = prepare_laser(logmatrix(logrow,3:end), PARAMS);
  
         % corner extraction
-        [z, z_nf] = extract_beacon4(rho, theta);
+        [z, z_nf] = extract_beacon4(rho, theta)
 
         if(isempty(z) == 0),
             % polar->cartesian

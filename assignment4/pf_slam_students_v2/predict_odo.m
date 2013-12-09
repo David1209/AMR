@@ -9,7 +9,7 @@ dth_n = Dmv(2);
 
 
 % predict state
-xv= particle.xv;
+xv = particle.xv;
 
 % xv contains the *LAST* position of the considered particle in world coordinate frame, such as:
 % xv(1) = last x
@@ -24,9 +24,15 @@ xv= particle.xv;
 % Hint:
 % x_new = x_old + dn_rn*cos(dth_rn + theta_old)
 
-particle.xv= [ write new X position of the particle in world coordinate frame ?????????????????????????? ; 
-               write new Y position of the particle in world coordinate frame ?????????????????????????? ;
-              pi_to_pi(pi_to_pi(?????????????) + ?????????? )];
+
+
+
+x_new = xv(1) + dr_n*cos(dth_n + xv(3));
+y_new = xv(2) + dr_n*sin(dth_n + xv(3));
+
+particle.xv = [ x_new ; 
+                y_new ;
+              pi_to_pi(pi_to_pi(xv(3)) + dth_n )];
  
  
 % pi_to_pi is a *safe* function that converts angles from [0,2*pi] into the
