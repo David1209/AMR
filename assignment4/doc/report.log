@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.2)  8 DEC 2013 19:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.2)  10 DEC 2013 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -492,25 +492,25 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 12.
 
 (c:/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    ... okay on input line 12.
 
 (c:/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -580,7 +580,7 @@ Package caption Info: End \AtBeginDocument code.
 <./logo.png, id=4, 823.075pt x 241.90375pt>
 File: ./logo.png Graphic file (type png)
  <use ./logo.png>
-Package pdftex.def Info: ./logo.png used on input line 14.
+Package pdftex.def Info: ./logo.png used on input line 15.
 (pdftex.def)             Requested size: 390.0pt x 114.62125pt.
  [1
 
@@ -592,43 +592,22 @@ Package pdftex.def Info: ./logo.png used on input line 14.
 
 [1] [2
 
-] <points.jpg, id=20, 563.10374pt x 421.575pt>
-File: points.jpg Graphic file (type jpg)
- <use points.jpg>
-Package pdftex.def Info: points.jpg used on input line 45.
-(pdftex.def)             Requested size: 117.00119pt x 87.59418pt.
-
-<grid.jpg, id=21, 563.10374pt x 421.575pt>
-File: grid.jpg Graphic file (type jpg)
- <use grid.jpg>
-Package pdftex.def Info: grid.jpg used on input line 51.
-(pdftex.def)             Requested size: 117.00119pt x 87.59418pt.
-
-<lines.jpg, id=22, 563.10374pt x 421.575pt>
-File: lines.jpg Graphic file (type jpg)
- <use lines.jpg>
-Package pdftex.def Info: lines.jpg used on input line 57.
-(pdftex.def)             Requested size: 117.00119pt x 87.59418pt.
- [3
-
- <./points.jpg> <./grid.jpg> <./lines.jpg>] [4] (./report.aux) ) 
+] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 11997 strings out of 493481
- 221014 string characters out of 3144420
- 259429 words of memory out of 3000000
- 15070 multiletter control sequences out of 15000+200000
- 9771 words of font info for 35 fonts, out of 3000000 for 9000
+ 11965 strings out of 493481
+ 220544 string characters out of 3144420
+ 258407 words of memory out of 3000000
+ 15042 multiletter control sequences out of 15000+200000
+ 9471 words of font info for 34 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,9n,55p,597b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
-<c:/texlive/201
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2012/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2012/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb>
-Output written on report.pdf (5 pages, 177142 bytes).
+ 56i,5n,55p,541b,186s stack positions out of 5000i,500n,10000p,200000b,50000s
+<c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on report.pdf (3 pages, 58824 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 31 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
