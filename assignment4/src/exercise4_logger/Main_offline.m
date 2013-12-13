@@ -43,17 +43,17 @@ center = [462; 340];
 % Open the log file for writing the data
 FILE = fopen(Log_name, 'w');
 data = Data();
-tic;
 for i = 11:71
     global file;
     file = ['../dataset/Onbewerkt/Picture', int2str(i),'.jpg'];
     
+    elap_time = (i - 10) * T_b_S;
     % Write encoder data to log file
-    SaveEncoderData(FILE, toc, data(i-10,1), data(i-10,2), N); %get toc, dx and dtheta from data
+    SaveEncoderData(FILE, elap_time, data(i-10,1), data(i-10,2), N); %get toc, dx and dtheta from data
     
     % Write laserscan data to log file
     laser_scans = GetLaserScans(N);
-    SaveLaserData(FILE, toc, laser_scans);  %get toc form data
+    SaveLaserData(FILE, elap_time, laser_scans);  %get toc form data
     
     if i == 50
         center = [462; 335];
