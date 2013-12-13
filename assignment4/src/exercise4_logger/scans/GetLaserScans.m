@@ -19,7 +19,7 @@ height = 0.1261;%     camera height in meters
 %height = 0.17;%       camera height in meters
 %% ---------------------------
 
-BWthreshold = 180;%   Threshold for segment the image into Black & white colors
+BWthreshold = 80;%   Threshold for segment the image into Black & white colors
 angstep = 360/N;%         Angular step of the beam in degrees
 axislimit = 0.8;%     Axis limit
 
@@ -34,11 +34,11 @@ Rmax = 180;
     snapshot = imflipud( snapshot );%   Flip the image Up-Down
          
     [undistortedimg, theta] = imunwrap( snapshot , center, angstep, Rmax, Rmin);% Transform omnidirectional image into a rectangular image
-
-    BWimg = img2bw( undistortedimg , BWthreshold );% Binarize rectangular image into Blak&White
-
-    rho = getpixeldistance( BWimg , Rmin );%     Get radial distance (this distance is still affected by radial distortion)
     
+    BWimg = img2bw( undistortedimg , BWthreshold );% Binarize rectangular image into Blak&White
+    
+    rho = getpixeldistance( BWimg , Rmin );%     Get radial distance (this distance is still affected by radial distortion)
+
    % figure(1); imagesc(snapshot); hold on; drawlaserbeam( center, theta, rho );        
     
     dist = undistort_dist_points(theta, rho, alpha, height);

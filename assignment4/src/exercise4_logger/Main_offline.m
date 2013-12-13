@@ -49,7 +49,7 @@ for i = 11:71
     file = ['../dataset/Onbewerkt/Picture', int2str(i),'.jpg'];
     
     % Write encoder data to log file
-    SaveEncoderData(FILE, toc, 0.01*data(i-10,1), data(i-10,2), N); %get toc, dx and dtheta from data
+    SaveEncoderData(FILE, toc, data(i-10,1), data(i-10,2), N); %get toc, dx and dtheta from data
     
     % Write laserscan data to log file
     laser_scans = GetLaserScans(N);
