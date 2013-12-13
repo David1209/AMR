@@ -42,10 +42,10 @@ global hSerial;
 
 % INITIALIZE VARIABLES.
 InitVariables;
-InitCamera;
+%InitCamera;
 
-robotData= GetRobotData(); % reads sensors and encoders
-encoder = robotData; % extracts encoder values
+%robotData= GetRobotData(); % reads sensors and encoders
+%encoder = robotData; % extracts encoder values
 
 % Open the log file for writing the data
 FILE = fopen(Log_name, 'w')

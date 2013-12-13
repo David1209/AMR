@@ -4,8 +4,8 @@
 % % SET COM PORT
 % COMPORT = '\\.\\COM6'; % virtual COM port number
 % 
-% %% SET INITIAL ROBOT POSITION.
-% startPose = [ 0, 0, pi/2 ]; % sets the robot start pose
+%% SET INITIAL ROBOT POSITION.
+startPose = [ 0, 0, pi/2 ]; % sets the robot start pose
 % 
 % %% SET FINAL ROBOT POSITION.
 % goalPose = [ 0.5, 0.5, 0.0, 0.1, 25.0 ]; % sets the robot goal pose
@@ -23,8 +23,8 @@
 % robotConst(1) = 0.02700; % wheel radius
 % robotConst(2) = 0.142/2; % 1/2 wheelbase
 % 
-% %% Run or Simulate
-% SIMULATE = 1;
+%% Run or Simulate
+SIMULATE = 1;
 
 %--------------------------------------------------------------------------
 

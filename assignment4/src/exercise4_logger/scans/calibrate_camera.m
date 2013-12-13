@@ -1,30 +1,31 @@
-function [response, center, Rmax, Rmin] = calibrate_camera(vid)
+function [response, center, Rmax, Rmin] = calibrate_camera()
 
 %global vid
-%global center Rmax Rmin
+global center Rmax Rmin
 
 disp('starting acquisition. Please wait...');
-for i=1:1
-    tmpsnapshot = getsnapshot(vid);
-end
+file = '../../dataset/Onbewerkt/Picture11.jpg';
+tmpsnapshot = imread(file);
 
 % Flip the image Up-Down
 snapshot = imflipud( tmpsnapshot );
 
 % Max detectable distance (set to 160 pixel by default in VGA image).
 % Rmax is automatically scaled according to the image size
-Rmax = round( 160/480*size(snapshot,1) )
+%Rmax = round( 160/480*size(snapshot,1) )
+Rmax = 180;
 % Min detectable distance (set to 77 pixel by default in VGA image).
 % Rmax is automatically scaled according to the image size
-Rmin = round( 77/480*size(snapshot,1) )
+%Rmin = round( 77/480*size(snapshot,1) )
+Rmin = 100;
 
 % This functrion allows you to calibrate the camera (extract the center of
 % the image). Follow the directions on-line
-figure(1); [center, radius] = get_circle(snapshot);
-center
+%figure(1); [center, radius] = get_circle(snapshot);
+center = [465; 343];
 % Draw the max and min radius
-draw2DCircle(center,Rmin,'m');
-draw2DCircle(center,Rmax,'m');
+%draw2DCircle(center,Rmin,'m');
+%draw2DCircle(center,Rmax,'m');
 
 
 % This function convert the omnidirectional picture into a rectangular

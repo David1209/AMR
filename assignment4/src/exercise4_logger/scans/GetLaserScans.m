@@ -1,6 +1,5 @@
 function dist = GetLaserScans(N)
 
-
 %   GetLaserScans()
 %
 %   Author: Xavier Perrin - xavier.perrin@mavt.ethz.ch
@@ -11,7 +10,7 @@ function dist = GetLaserScans(N)
 % MOST IMPORTANT PARAMETERS
 % -------------------------------------------------------------------------
 
-alpha = 107;%         Radial distortion coefficient
+alpha = 140;%         Radial distortion coefficient
 height = 0.1261;%     camera height in meters 
 
 %% ------Old values ------
@@ -24,11 +23,13 @@ BWthreshold = 180;%   Threshold for segment the image into Black & white colors
 angstep = 360/N;%         Angular step of the beam in degrees
 axislimit = 0.8;%     Axis limit
 
-global vid
+global file
 global center Rmax Rmin
-
+center = [465; 343];
+Rmin = 100;
+Rmax = 180;
 %start(vid); 
-    snapshot = getsnapshot(vid);%       Acquire image
+    snapshot = imread(file);%       Acquire image
     
     snapshot = imflipud( snapshot );%   Flip the image Up-Down
          
