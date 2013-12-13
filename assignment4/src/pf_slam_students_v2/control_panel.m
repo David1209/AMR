@@ -44,7 +44,7 @@ EFECTIVE_PERCENTAGE= 0.75; % minimum number of effective particles before resamp
 %   DATASET LOAD
 % -------------------------------
 
-log = ReadLogFile('log.txt');
+log = ReadLogFile('log2.txt');
 
 % -------------------------------
 %   PARTICLE FILTER SLAM

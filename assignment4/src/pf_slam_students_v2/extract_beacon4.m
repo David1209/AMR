@@ -12,7 +12,7 @@ len_buff = size(dist_pt,2);
 
 
 XY = [x;y];
-[NLines, r, alpha, segend, seglen] = recsplit(XY);
+[NLines, r, alpha, segend, seglen] = recsplit(XY); %needs fix
 
 % disp(sprintf('Number of extracted lines: %d\n', NLines));
 

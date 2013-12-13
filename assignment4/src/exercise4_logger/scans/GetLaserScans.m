@@ -24,8 +24,7 @@ angstep = 360/N;%         Angular step of the beam in degrees
 axislimit = 0.8;%     Axis limit
 
 global file
-global center Rmax Rmin
-center = [465; 343];
+global Rmax Rmin
 Rmin = 100;
 Rmax = 180;
 %start(vid); 
