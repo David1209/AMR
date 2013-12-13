@@ -1,7 +1,5 @@
 function [rho , theta] = prepare_laser(laser_buff, PARAMS)
 
-
-
 % size definitions
 c_size = size(laser_buff, 2);
 

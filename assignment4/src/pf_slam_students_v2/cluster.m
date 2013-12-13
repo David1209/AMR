@@ -1,7 +1,7 @@
 function [NClusters, ClusterIdx] = cluster(XY)
   
 configfile;
-    
+  
 % Compute the rho's
 N = size(XY, 2);
 rho = sqrt(XY(1,:).^2 + XY(2,:).^2);
@@ -34,7 +34,6 @@ for i=2:N
   end
 end
 
-
 % removing small clusters
 for i=1:NClusters,
   if ClusterSize(i) < MINCLUPOINTS
@@ -42,7 +41,6 @@ for i=1:NClusters,
     ClusterSize(i) = 0;
   end
 end
-
 
 % Construct output
 NClu = NClusters;

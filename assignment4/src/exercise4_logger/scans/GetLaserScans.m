@@ -41,8 +41,9 @@ Rmax = 180;
     
    % figure(1); imagesc(snapshot); hold on; drawlaserbeam( center, theta, rho );        
     
-    dist = undistort_dist_points( theta , rho , alpha , height );
+    dist = undistort_dist_points(theta, rho, alpha, height);
     dist = [dist((N/2+1):end) dist(1:(N/2))];
+
     figure(2); draw_undisdtorted_beam( dist , theta , axislimit ); drawnow;
 
   %  c = img2bw( grayimg , BWthreshold ); figure(3); imagesc(c); colormap(gray); drawnow;

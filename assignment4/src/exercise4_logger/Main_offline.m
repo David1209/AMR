@@ -45,7 +45,7 @@ FILE = fopen(Log_name, 'w');
 data = Data();
 for i = 11:71
     global file;
-    file = ['../dataset/Onbewerkt/Picture ', int2str(i),'.jpg'];
+    file = ['../dataset/Onbewerkt/Picture', int2str(i),'.jpg'];
     
     elap_time = (i - 10) * T_b_S;
     % Write encoder data to log file
