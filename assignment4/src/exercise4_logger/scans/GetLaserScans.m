@@ -25,6 +25,7 @@ axislimit = 0.8;%     Axis limit
 
 global file
 global Rmax Rmin
+global center
 Rmin = 100;
 Rmax = 180;
 %start(vid); 

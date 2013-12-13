@@ -1,5 +1,6 @@
 function data = Data()
-data = [5,0; 
+data = [0,0;
+    5,0; 
 	5,45;
 	5,45;
 	5,-45;
