@@ -8,19 +8,19 @@ close all
 % % odo noises
 sigmaX = 0.003; % m set to 0.010 for test
 sigmaTH = deg2rad(0.02); % rad set to 0.10 for test
-PARAMS.Q= [sigmaX^2 0; 0 sigmaTH^2];
+PARAMS.Q = [sigmaX^2 0; 0 sigmaTH^2];
 
 % % observation noises
-sigmaR= 0.01; % m
-sigmaB= deg2rad(0.01); % rad
-PARAMS.R= [sigmaR^2 0; 0 sigmaB^2];
+sigmaR = 0.01; % m
+sigmaB = deg2rad(0.01); % rad
+PARAMS.R = [sigmaR^2 0; 0 sigmaB^2];
 
 % NUM PARTICLES
 PARAMS.NPARTICLES = 200; 
 
 % laser filtering
 PARAMS.FEAT_MIN_RANGE = 0.05;
-PARAMS.FEAT_MAX_RANGE = 0.4; % set to 0.5+ according to rene
+PARAMS.FEAT_MAX_RANGE = 1.0; % set to 0.5+ according to rene
 
 % corner extraction
 PARAMS.FEAT_MIN_ANGLE = deg2rad(150);
@@ -31,7 +31,7 @@ PARAMS.FEAT_MAX_DIST = 90;
 PARAMS.NN_MAX_DIST = 18;
 
 % Odometry filter
-PARAMS.TOL_JMP = 0.21; % set to 0.2 according to rene
+PARAMS.TOL_JMP = 0.45; % set to 0.2 according to rene
 
 % Camera relative position respect to the wheels
 PARAMS.CAMERA_POS_DX = 0.065;
