@@ -31,7 +31,7 @@ PARAMS.FEAT_MAX_DIST = 90;
 PARAMS.NN_MAX_DIST = 18;
 
 % Odometry filter
-PARAMS.TOL_JMP = 0.02; % set to 0.2 according to rene
+PARAMS.TOL_JMP = 0.21; % set to 0.2 according to rene
 
 % Camera relative position respect to the wheels
 PARAMS.CAMERA_POS_DX = 0.065;
@@ -45,7 +45,7 @@ EFECTIVE_PERCENTAGE= 0.75; % minimum number of effective particles before resamp
 % -------------------------------
 
 log = ReadLogFile('../exercise4_logger/log.txt');
-log
+
 % -------------------------------
 %   PARTICLE FILTER SLAM
 % -------------------------------
