@@ -50,8 +50,7 @@ A snapshot from the omnidirectional camera describes a 2D slice of the environme
 	x\cos{\alpha} + y\sin{\alpha} = r
 \end{equation}
 In which $-\pi < \alpha < \pi$ is the angle between the line and the x-axis, $r >= 0$ is the distance of the line to the origin and $(x, y)$ are the Cartesian coordinates of the point lying on the plane. \\ \\
-In order to identify the best line segments for the obtained measurements, the Split-and-Merge algorithm is employed.
-\subsection{Endpoint collection}
+In order to identify the best line segments for the obtained measurements, the Split-and-Merge algorithm is employed. The endpoints from the lines returned by the Split-and-Merge algorithm are used as endpoints, and therefore the corners detected.
 
 \subsection{Parameters}
 The FastSLAM approach estimates the pose of the robots and the features using a particle filter. Each particle represents a possible robots position and its map of the environment. A few parameters of the SLAM algorithm can be tweaked, in order to improve performance of the algorithm:
@@ -61,34 +60,34 @@ The FastSLAM approach estimates the pose of the robots and the features using a 
 \item \textbf{The variance of the range sensor} - saved as \verb|sigmaR| and \verb|sigmaB|: this indicates the possible error value for the range sensor. Higher values for these parameters make the locations of the walls less certain.
 \end{enumerate}
 Results of tweaking the parameters can be seen in figure \ref{fig:tweaks}.
-\begin{figure}[h!]
+
+\section{Experiments}
+When running the algorithm on the data set provided, it returned the following result:
+\begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{normal.jpg}
 		\caption{Normal result}
+		\label{norm}
 	\end{subfigure}
 	~
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{1000particles.jpg}
 		\caption{More particles}
+		\label{more}
 	\end{subfigure}
 	~
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{sigma_chance.jpg}
 		\caption{Using a higher $\sigma$}
+		\label{sigma}
 	\end{subfigure}
 	\caption{Different parameters}
 	\label{fig:tweaks}
 \end{figure}
-\section{Experiments}
-When running the algorithm on the data set provided, it returned the following result:
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.5\textwidth]{normal.jpg}
-\end{figure}
 
 \subsection{Results}
-
+When comparing the images in figure \ref{fig:tweaks}, it can be seen that increasing the uncertainty in figure \ref{sigma} increases the size of both the particle cloud and the possible locations of the walls. Furthermore, increasing the number of particles in figure \ref{more}, make the cloud of particles denser but not necessarily wider. Therefore is seems a good practice to keep the particle cloud at a reasonable size, while trying to reduce the $\sigma$s as much as possible. 
 \section{Working with a photo dataset}
 \subsection{Logging the data}
 To build the map of the environment using FastSLAM, the robot keeps track of its movements and environment by reading its encoder and taking photos of its environment respectively. Using this information, FastSLAM is able to locate the robots position and map its environment. In case of a dataset of photos without encoder logs, this becomes troublesome as the movements of the robot are not known exactly. Therefore, these movements have to be estimated by hand.
