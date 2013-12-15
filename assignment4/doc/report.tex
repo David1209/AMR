@@ -53,11 +53,11 @@ In order to identify the best line segments for the obtained measurements, the S
 \subsection{Endpoint collection}
 
 \subsection{Parameters}
-The FastSLAM approach estimates the pose of the robots and the features using a particle filter. Each particle represents a possible robots position and its map of the environment. A few parameters of the SLAM algorithm can be tweaked, in order to improve performance of the algorihm:
+The FastSLAM approach estimates the pose of the robots and the features using a particle filter. Each particle represents a possible robots position and its map of the environment. A few parameters of the SLAM algorithm can be tweaked, in order to improve performance of the algorithm:
 \begin{enumerate}
-\item \textbf{The number of particles} - saved as \verb|PARAMS.NPARTICLES|:
-\item \textbf{The variance of the odometry} - saved as \verb|sigmaX| and \verb|sigmaTH|:
-\item \textbf{The variance of the range sensor} - saved as \verb|sigmaR| and \verb|sigmaB|:
+\item \textbf{The number of particles} - saved as \verb|PARAMS.NPARTICLES|: this influences the number of particles in the cloud. More particles gives an higher chance of a particle representing the exact position of the robot, but requires more computational power and also introduces more wrong particles.
+\item \textbf{The variance of the odometry} - saved as \verb|sigmaX| and \verb|sigmaTH|: this indicates the possible error value for the odometry of the robot. \verb|sigmaX| indicates the error in the speed, while \verb|sigmaTH| indicates the error in rotation. Higher values for these parameters make the size of the particle cloud bigger, and therefore the locations of the walls in the map less certain.
+\item \textbf{The variance of the range sensor} - saved as \verb|sigmaR| and \verb|sigmaB|: this indicates the possible error value for the range sensor. Higher values for these parameters make the locations of the walls less certain.
 \end{enumerate}
 \section{Experiments}
 When running the algorithm on the data set provided, it returned the following result:

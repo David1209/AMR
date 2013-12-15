@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.2)  14 DEC 2013 15:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.2)  15 DEC 2013 15:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -593,20 +593,16 @@ Package pdftex.def Info: ./logo.png used on input line 15.
 [1] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 46--49
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
 <normal.jpg, id=22, 563.10374pt x 421.575pt>
 File: normal.jpg Graphic file (type jpg)
  <use normal.jpg>
-Package pdftex.def Info: normal.jpg used on input line 62.
+Package pdftex.def Info: normal.jpg used on input line 66.
 (pdftex.def)             Requested size: 195.0pt x 145.99031pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] [4 <./normal.jpg>] (./report.aux) ) 
+ [3] [4 <./normal.jpg>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  11975 strings out of 493481
  220676 string characters out of 3144420
@@ -614,14 +610,14 @@ Here is how much of TeX's memory you used:
  15049 multiletter control sequences out of 15000+200000
  9640 words of font info for 35 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,7n,55p,541b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
-<c:/texlive/2012/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmcsc10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (5 pages, 125441 bytes).
+ 56i,7n,55p,568b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
+<c:/texlive/2012/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmcsc10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (5 pages, 126522 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
