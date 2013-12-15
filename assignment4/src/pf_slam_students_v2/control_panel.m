@@ -6,7 +6,7 @@ close all
 % -------------------------------
 
 % % odo noises
-sigmaX = 0.003; % m set to 0.010 for test
+sigmaX = 0.02; % m set to 0.010 for test
 sigmaTH = deg2rad(0.02); % rad set to 0.10 for test
 PARAMS.Q = [sigmaX^2 0; 0 sigmaTH^2];
 

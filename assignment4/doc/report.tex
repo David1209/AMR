@@ -32,13 +32,17 @@
 \tableofcontents
 \clearpage
 \section{Introduction}
-In order for an autonomous mobile robot to be able to navigate without a priori knowlegde about the map, it has to determine its position whilst building the map. This can be accomplished by using the Simultaneous Localization and Mapping (SLAM) algorithm. One of the variations of SLAM is FastSLAM, a particle filter based algorithm which has a better performance in real time map building. FastSLAM scales logarithmically with the number of landmarks in the map, and is therefore much more suitable for real-time applications.
+In order for an autonomous mobile robot to be able to navigate without a priori knowledge about the map, it has to determine its position whilst building the map. This can be accomplished by using the Simultaneous Localization and Mapping (SLAM) algorithm. One of the variations of SLAM is FastSLAM, a particle filter based algorithm which has a better performance in real time map building than most other variations. FastSLAM scales logarithmically with the number of landmarks in the map, and is therefore much more suitable for real-time applications.
 
 \section{Setup}
-A NXT robot has been equipped with an omnidirectional camera. Using this NXT, a dataset of images has been made. This is a contraint of the equipment provided, since there was no NXT available to perform real-time experiments. A basic environment has been taped out, and from the point of view of the robot some snapshots have been made. 
-\todo{David}{Invoegen van afbeelding van de map}  \todo{Ruben}{Iets vertellen over meegeleverde logfiles}
+A NXT robot has been equipped with an omnidirectional camera. Using this NXT, a dataset of images has been made instead of a live video feed. Eventhough using the dataset is less accurate, the FastSLAM algorithm should be able to compensate for this. A basic environment has been taped out, and from the point of view of the robot some snapshots have been made. 
+
+insert picture of environment here
+
+iets uitgebreider? wat?
+
 \section{FastSLAM}
-To implement FastSLAM, a pre-recorded dataset had been provided. The input of the SLAM algorithm consists of odometry data and observable features. Here, corners are used as landmarks, detected as endpoint segments of lines extracted from data using the onmidirectional camera. The corner detection algorithm can be reduced to two steps: line extraction and endpoint collection.
+To implement FastSLAM, a pre-recorded dataset is used. The input of the SLAM algorithm consists of odometry data and observable features. Here, corners are used as landmarks, detected as endpoint segments of lines extracted from data using the onmidirectional camera. The corner detection algorithm can be reduced to two steps: line extraction and endpoint collection.
 \subsection{Line extraction}
 A snapshot from the onmidirectional camera describes a 2D slice of the environment. Points in such a snapshot are specified in the polar coordinate system $(pi, {\theta}i)$, with the origin at the location of the camera. In order to fit a line through the points, a line is expressed in polar coordinates:
 \begin{equation}
