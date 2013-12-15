@@ -6,8 +6,8 @@ close all
 % -------------------------------
 
 % % odo noises
-sigmaX = 0.02; % m set to 0.010 for test
-sigmaTH = deg2rad(0.02); % rad set to 0.10 for test
+sigmaX = 0.003; % m
+sigmaTH = deg2rad(0.02); % rad
 PARAMS.Q = [sigmaX^2 0; 0 sigmaTH^2];
 
 % % observation noises
@@ -20,7 +20,7 @@ PARAMS.NPARTICLES = 200;
 
 % laser filtering
 PARAMS.FEAT_MIN_RANGE = 0.05;
-PARAMS.FEAT_MAX_RANGE = 1.0; % set to 0.5+ according to rene
+PARAMS.FEAT_MAX_RANGE = 1.0;
 
 % corner extraction
 PARAMS.FEAT_MIN_ANGLE = deg2rad(150);
@@ -31,7 +31,7 @@ PARAMS.FEAT_MAX_DIST = 90;
 PARAMS.NN_MAX_DIST = 18;
 
 % Odometry filter
-PARAMS.TOL_JMP = 0.45; % set to 0.2 according to rene
+PARAMS.TOL_JMP = 0.02;
 
 % Camera relative position respect to the wheels
 PARAMS.CAMERA_POS_DX = 0.065;
@@ -44,7 +44,8 @@ EFECTIVE_PERCENTAGE= 0.75; % minimum number of effective particles before resamp
 %   DATASET LOAD
 % -------------------------------
 
-log = ReadLogFile('../exercise4_logger/log.txt');
+%log = ReadLogFile('../exercise4_logger/log.txt');
+log = ReadLogFile('example_log.txt');
 
 % -------------------------------
 %   PARTICLE FILTER SLAM
