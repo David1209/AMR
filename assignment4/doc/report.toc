@@ -2,12 +2,11 @@
 \contentsline {section}{\numberline {2}Setup}{2}
 \contentsline {section}{\numberline {3}FastSLAM}{2}
 \contentsline {subsection}{\numberline {3.1}Line extraction}{2}
-\contentsline {subsection}{\numberline {3.2}Endpoint collection}{3}
-\contentsline {subsection}{\numberline {3.3}Parameters}{3}
+\contentsline {subsection}{\numberline {3.2}Parameters}{3}
 \contentsline {section}{\numberline {4}Experiments}{4}
 \contentsline {subsection}{\numberline {4.1}Results}{4}
-\contentsline {section}{\numberline {5}Working with a photo dataset}{4}
-\contentsline {subsection}{\numberline {5.1}Logging the data}{4}
+\contentsline {section}{\numberline {5}Working with a photo dataset}{5}
+\contentsline {subsection}{\numberline {5.1}Logging the data}{5}
 \contentsline {subsection}{\numberline {5.2}Parameters}{5}
 \contentsline {subsection}{\numberline {5.3}Results}{5}
 \contentsline {section}{\numberline {6}Conclusion}{7}
