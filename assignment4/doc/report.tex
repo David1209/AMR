@@ -59,6 +59,26 @@ The FastSLAM approach estimates the pose of the robots and the features using a 
 \item \textbf{The variance of the odometry} - saved as \verb|sigmaX| and \verb|sigmaTH|: this indicates the possible error value for the odometry of the robot. \verb|sigmaX| indicates the error in the speed, while \verb|sigmaTH| indicates the error in rotation. Higher values for these parameters make the size of the particle cloud bigger, and therefore the locations of the walls in the map less certain.
 \item \textbf{The variance of the range sensor} - saved as \verb|sigmaR| and \verb|sigmaB|: this indicates the possible error value for the range sensor. Higher values for these parameters make the locations of the walls less certain.
 \end{enumerate}
+Results of tweaking the parameters can be seen in figure \ref{fig:tweaks}.
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{normal.jpg}
+		\caption{Normal result}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{1000particles.jpg}
+		\caption{More particles}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{sigma_chance.jpg}
+		\caption{Using a higher $\sigma$}
+	\end{subfigure}
+	\caption{Different parameters}
+	\label{fig:tweaks}
+\end{figure}
 \section{Experiments}
 When running the algorithm on the data set provided, it returned the following result:
 \begin{figure}[h!]
