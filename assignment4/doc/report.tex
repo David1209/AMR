@@ -65,7 +65,29 @@ When running the algorithm on the data set provided, it returned the following r
 	\centering
 	\includegraphics[width=0.5\textwidth]{normal.jpg}
 \end{figure}
-\section{Results}
+
+\subsection{Results}
+
+\section{Working with a photo dataset}
+\subsection{Logging the data}
+To build the map of the environment using FastSLAM, the robot keeps track of its movements and environment by reading its encoder and taking photos of its environment respectively. Using this information, FastSLAM is able to locate the robots position and map its environment. In case of a dataset of photos without encoder logs, this becomes troublesome as the movements of the robot are not known exactly. Therefore, these movements have to be estimated by hand.
+
+\subsection{Parameters}
+Given that the robot movements are estimated by hand, the uncertainty of the movements increases. As a result, it becomes harder for FastSLAM to localize the robot and map the environment. Because the noise of the movements increase, the robots location is less precise and more uncertain. To compensate for this, the deviations $\sigma_x$ and $\sigma_\theta$ increase, resulting in a less accurate localization of the robot.
+
+In the used photo dataset however, only $\sigma_x$ increases significantly. In this dataset, it is relatively more difficult to estimate the exact distance moved by the robot, than to estimate the difference in orientation. This is because almost all orientation movements by the robot are 45 degrees and can be estimated relative to the environment. To estimate the distance however, it cannot be estimated easily on the surroundings, as all distances are not exactly known.
+
+\subsection{Results}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{own_normal.jpg}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{own_very_high_sigma.jpg}
+\end{figure}
 
 \section{Conclusion}
 
